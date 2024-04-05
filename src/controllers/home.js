@@ -11,6 +11,6 @@ export const index = (req, res) => res.send('Hello World!');
  * Health check
  */
 export const healthCheck = async (req, res) => {
-  const users = await db.models.user.findAll();
-  return res.json({ success: true, data: users });
+  const todo = await db.models.task.findAll();
+  return res.json({ success: true, data: todo });
 };
